@@ -62,6 +62,7 @@ local function text(length,paragraph_length)
 end
 
 local function dummy(f)
+    assert(type(f)=="string")
     local line, col = core.active_view.doc:get_selection()
     core.active_view.doc:raw_insert(line,col,f,{ idx = 1 },0)
 end
@@ -81,6 +82,4 @@ keymap.add {
   ["ctrl+8"] = "lorem:paragraph",
   ["ctrl+9"] = "lorem:text",
 }
-
-
 
