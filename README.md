@@ -1,5 +1,5 @@
 # lorem
-[Lite-xl](https://github.com/lite-xl/lite-xl) plugin for generating lorem Ipsum placeholder dummy text.
+[Lite-xl](https://github.com/lite-xl/lite-xl) plugin for generating lorem ipsum placeholder dummy text.
 
 # Installation
 
