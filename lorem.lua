@@ -5,8 +5,10 @@ local command = require "core.command"
 local config = require "core.config"
 local keymap = require "core.keymap"
 
-config.lorem_para_len = 10 -- Length of a paragraph
-config.lorem_para_no = 3   -- Number of paragraphs 
+config.plugins.lorem = {
+    para_len = 10, -- Length of a paragraph
+    para_no = 3   -- Number of paragraphs 
+}
 
 local data = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 local dataTable = { "Quisque vitae varius ex, eu volutpat orci.",
@@ -70,10 +72,10 @@ end
 command.add("core.docview", {
     ["lorem:sentence"] = function() dummy(sentence()) end,
     ["lorem:paragraph"] = function()         
-       dummy(paragraph(config.lorem_para_len,false))         
+       dummy(paragraph(config.plugins.lorem.para_len,false))         
     end,
     ["lorem:text"] = function()         
-       dummy(text(config.lorem_para_no,config.lorem_para_len))         
+       dummy(text(config.plugins.lorem.para_no,config.plugins.lorem.para_len))         
     end,
 })
 
