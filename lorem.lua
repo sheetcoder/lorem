@@ -63,7 +63,7 @@ end
 
 local function dummy(f)
     local line, col = core.active_view.doc:get_selection()
-    core.active_view.doc:raw_insert(line,col,f)
+    core.active_view.doc:raw_insert(line,col,f,{ idx = 1 },0)
 end
 
 command.add("core.docview", {
@@ -81,5 +81,6 @@ keymap.add {
   ["ctrl+8"] = "lorem:paragraph",
   ["ctrl+9"] = "lorem:text",
 }
+
 
 
