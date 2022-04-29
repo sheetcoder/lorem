@@ -5,7 +5,7 @@ local command = require "core.command"
 local config = require "core.config"
 local keymap = require "core.keymap"
 
-config.lorem_para_len = 10 -- Length of paragraph
+config.lorem_para_len = 10 -- Length of a paragraph
 config.lorem_para_no = 3   -- Number of paragraphs 
 
 local data = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
