@@ -1,14 +1,36 @@
--- mod-version:2 -- lite-xl 2.0
+-- mod-version:3 -- lite-xl 3.0
 
 local core = require "core"
 local command = require "core.command"
 local config = require "core.config"
 local keymap = require "core.keymap"
+local common = require "core.common"
 
-config.plugins.lorem = {
+config.plugins.lorem = common.merge({
     para_len = 10, -- Length of a paragraph
-    para_no = 3   -- Number of paragraphs 
-}
+    para_no = 3, -- Number of paragraphs 
+    config_spec = {
+        name = "Lorem",
+        {
+            label = "Paragraph Length",
+            description = "Enter the length of a paragaph.",
+            path = "para_len",
+            type = "number",
+            default = 10,
+            min = 1,
+            max = 100
+        },
+        {
+            label = "Paragraph Numbers",
+            description = "Enter the number of paragaphs.",
+            path = "para_no",
+            type = "number",
+            default = 3,
+            min = 1,
+            max = 30
+        }
+    }
+}, config.plugins.lorem)
 
 local data = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 local dataTable = { "Quisque vitae varius ex, eu volutpat orci.",
