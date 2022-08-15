@@ -1,5 +1,5 @@
 # lorem
-[Lite-xl](https://github.com/lite-xl/lite-xl) plugin for generating Lorem Ipsum placeholder dummy text.
+[Lite-xl](https://github.com/lite-xl/lite-xl) plugin for generating Lorem Ipsum placeholder dummy text. Need 2.1 or above version of lite-xl.
 
 # Installation
 
@@ -10,8 +10,10 @@ Drop `lorem.lua` file in the [relevent folders](https://github.com/lite-xl/lite-
 * Length and number of paragraphs can be customized from inside `lorem.lua`
 
 ```lua
-config.lorem_para_len = 10 -- Length of a paragraph
-config.lorem_para_no = 3   -- Number of paragraphs 
+ config.plugins.lorem = {
+    para_len = 10, -- Length of a paragraph
+    para_no = 3   -- Number of paragraphs 
+}
 ```
 
 ### Sentence
